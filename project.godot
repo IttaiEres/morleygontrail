@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 BackGroundMusic="*res://back_ground_music.tscn"
 DialogManager="*res://assets/DialogManager.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 advance_dialog={

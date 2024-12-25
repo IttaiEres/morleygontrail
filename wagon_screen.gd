@@ -35,11 +35,11 @@ const HannahLines: Array[String] = [
 
 const HannahLines2 : Array[String] = [
 	"Oh no, something definitely broke in that hitching process!",
-	"If only someone could fix the wagon!",
-	"*Stares at Matt*"
+	"If only someone could fix the wagon!"
 ]
 
 const HannahLines0 : Array[String] = [
+	"*Stares at Matt*",
 	"(Press space, then R to repair)"
 ]
 
@@ -81,7 +81,7 @@ const RichLines: Array[String] = [
 ]
 
 const IttaiLines: Array[String] = [
-	"Merry Christmas 2025 to my Morley Family! - With Much Love, Ittai"
+	"Merry Christmas 2024 to my Morley Family! - With Much Love, Ittai"
 ]
 
 @onready var hitch_given = false

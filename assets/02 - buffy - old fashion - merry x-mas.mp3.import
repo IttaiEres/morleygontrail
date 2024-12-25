@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfglxbevgxpkt"
+path="res://.godot/imported/02 - buffy - old fashion - merry x-mas.mp3-cc6a49bf6870b22a51ffc1bb4273a9c9.mp3str"
+
+[deps]
+
+source_file="res://assets/02 - buffy - old fashion - merry x-mas.mp3"
+dest_files=["res://.godot/imported/02 - buffy - old fashion - merry x-mas.mp3-cc6a49bf6870b22a51ffc1bb4273a9c9.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

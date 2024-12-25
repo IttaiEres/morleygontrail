@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgdc3v4ejebbd"]
+
+[ext_resource type="Texture2D" uid="uid://cgowayb6dfdrd" path="res://assets/Rich_Christmas.png" id="1_h4n6y"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_h4n6y")

@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://d32686kpesrsu"]
+
+[ext_resource type="Script" path="res://TitleScreen.gd" id="1_8aobq"]
+[ext_resource type="Texture2D" uid="uid://b74lecd8fpw7a" path="res://assets/MorleyGonTrail.png" id="1_qpvlk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cg1pp"]
+texture = ExtResource("1_qpvlk")
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 127.0
+offset_top = 72.0
+offset_right = 127.0
+offset_bottom = 72.0
+script = ExtResource("1_8aobq")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -129.0
+offset_top = -73.0
+offset_right = 1030.0
+offset_bottom = 578.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_cg1pp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 203.0
+offset_right = 486.0
+offset_bottom = 304.0
+scale = Vector2(2.126, 2.126)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="SettingsPopup" type="PopupPanel" parent="."]
+position = Vector2i(350, 550)
+size = Vector2i(504, 50)
+
+[node name="Label" type="Label" parent="SettingsPopup"]
+layout_direction = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 500.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+text = "Settings are only available for paid subscribers. Subscribe today!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AutoCloseTimer" type="Timer" parent="SettingsPopup"]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="MarginContainer" method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="MarginContainer" method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="MarginContainer" method="_on_quit_pressed"]
+[connection signal="popup_hide" from="SettingsPopup" to="." method="_on_settings_popup_popup_hide"]
+[connection signal="timeout" from="SettingsPopup/AutoCloseTimer" to="." method="_on_auto_close_timer_timeout"]
+[connection signal="timeout" from="SettingsPopup/AutoCloseTimer" to="MarginContainer" method="_on_auto_close_timer_timeout"]

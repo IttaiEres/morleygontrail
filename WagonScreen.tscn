@@ -1,0 +1,945 @@
+[gd_scene load_steps=76 format=3 uid="uid://cbsmccolosaa5"]
+
+[ext_resource type="Script" path="res://wagon_screen.gd" id="1_35dff"]
+[ext_resource type="Texture2D" uid="uid://b5t1qbyb5xy7m" path="res://assets/OregonTrailBG.png" id="1_c2ksl"]
+[ext_resource type="Texture2D" uid="uid://bqy4wcioxlrqv" path="res://assets/Rich_base.png" id="1_t3x6x"]
+[ext_resource type="Texture2D" uid="uid://dxiowyiecw5t1" path="res://assets/Rich_action.png" id="2_w6sii"]
+[ext_resource type="Texture2D" uid="uid://besl07i53a64k" path="res://assets/Hannah_base.png" id="3_mdsvd"]
+[ext_resource type="Texture2D" uid="uid://bv26gp5gj8vf" path="res://assets/Ittai.png" id="4_r6t0h"]
+[ext_resource type="Texture2D" uid="uid://ow4smusuofmw" path="res://assets/Kim_base.png" id="6_5dybg"]
+[ext_resource type="Texture2D" uid="uid://bhyvhvjmi3ryx" path="res://assets/Matt_base.png" id="6_bbgup"]
+[ext_resource type="Texture2D" uid="uid://c1f8q65cyiwk3" path="res://assets/Matt_action.png" id="7_y87h4"]
+[ext_resource type="Texture2D" uid="uid://ik1ty3vuxh4f" path="res://assets/WagonIttai.png" id="10_33gte"]
+[ext_resource type="Texture2D" uid="uid://st7ud2t5hli" path="res://assets/reigns.png" id="11_1fx8b"]
+[ext_resource type="AudioStream" uid="uid://c8lyir1fjnxky" path="res://assets/crack11.mp3" id="12_677kg"]
+[ext_resource type="AudioStream" uid="uid://38te1jnki40m" path="res://assets/repair.mp3" id="13_owgc5"]
+[ext_resource type="AudioStream" uid="uid://bxaodq8ii38ga" path="res://assets/blocky.mp3" id="14_1fjt7"]
+[ext_resource type="Texture2D" uid="uid://nevjqw87owci" path="res://assets/tree.png" id="15_e6jpk"]
+[ext_resource type="Texture2D" uid="uid://ctpe5qlgj38o4" path="res://assets/felled_trees.png" id="15_ua0em"]
+[ext_resource type="AudioStream" uid="uid://dgddw7thckc7b" path="res://assets/falling_tree_only.mp3" id="17_fsxlf"]
+[ext_resource type="AudioStream" uid="uid://dfn5ipyhirh80" path="res://assets/splash1.wav" id="18_ckjbd"]
+[ext_resource type="AudioStream" uid="uid://c1885t15dpndu" path="res://assets/axechopping.mp3" id="18_njo5y"]
+[ext_resource type="Texture2D" uid="uid://bksyebjfhcdpb" path="res://assets/items_townProps.png" id="19_i50wq"]
+[ext_resource type="Texture2D" uid="uid://chnpekm7y3ykv" path="res://assets/flowers.png" id="21_83675"]
+[ext_resource type="AudioStream" uid="uid://c0x5nx1lengt" path="res://assets/zebra.mp3" id="22_lhksf"]
+[ext_resource type="Texture2D" uid="uid://h6sxm3ci1cne" path="res://assets/christmas.jpg" id="23_fi780"]
+[ext_resource type="Texture2D" uid="uid://xr2xneivugg6" path="res://assets/HannahChristmas.png" id="24_puf1i"]
+[ext_resource type="AudioStream" uid="uid://cfglxbevgxpkt" path="res://assets/02 - buffy - old fashion - merry x-mas.mp3" id="25_6eitq"]
+[ext_resource type="AudioStream" uid="uid://dn57xd52j1vl4" path="res://you-got-a-star-made-with-Voicemod.mp3" id="26_85jyv"]
+[ext_resource type="Texture2D" uid="uid://dhqs0nto11muy" path="res://assets/MattChristmas.png" id="27_mqjj3"]
+[ext_resource type="Texture2D" uid="uid://du0jrjuuo2go8" path="res://assets/KimChristmas.png" id="28_wl81k"]
+[ext_resource type="Texture2D" uid="uid://cgowayb6dfdrd" path="res://assets/Rich_Christmas.png" id="29_reuhb"]
+[ext_resource type="AudioStream" uid="uid://bdwiojbt8d8b" path="res://assets/Voicy_sprout talk.mp3" id="30_l8rcd"]
+
+[sub_resource type="Animation" id="Animation_m4tvr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [26]
+}
+
+[sub_resource type="Animation" id="Animation_il66q"]
+resource_name = "StandBreathe"
+length = 2.5
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.505279, 1.0026, 1.50007, 2.00573),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [130, 26, 132, 133, 136]
+}
+
+[sub_resource type="Animation" id="Animation_utg22"]
+resource_name = "StandLeft"
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0035056, 0.515322),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [66, 67]
+}
+
+[sub_resource type="Animation" id="Animation_vu1g6"]
+resource_name = "StandRight"
+length = 1.5
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0105168, 0.5013, 1.00961),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [45, 41, 40]
+}
+
+[sub_resource type="Animation" id="Animation_1jg4x"]
+resource_name = "Talk"
+length = 2.5
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00701119, 0.504805, 1.00961, 1.50427, 2.00633),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [31, 186, 187, 234, 235]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fvpok"]
+_data = {
+"RESET": SubResource("Animation_m4tvr"),
+"StandBreathe": SubResource("Animation_il66q"),
+"StandLeft": SubResource("Animation_utg22"),
+"StandRight": SubResource("Animation_vu1g6"),
+"Talk": SubResource("Animation_1jg4x")
+}
+
+[sub_resource type="Animation" id="Animation_0qo0f"]
+resource_name = "GallopLeft"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-7.45058e-09, 0.311998, 0.613478, 0.897674, 1.19915, 1.42723, 3.32638),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [81, 82, 83, 84, 85, 86, 84]
+}
+
+[sub_resource type="Animation" id="Animation_8u1v7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_6rkga"]
+resource_name = "StandLeft"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.79397e-09, 0.511816, 0.992082),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [54, 55, 56]
+}
+
+[sub_resource type="Animation" id="Animation_l4v5f"]
+resource_name = "StandRight"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0035056, 0.504805, 1.01312, 1.50777),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 10, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3hwxg"]
+_data = {
+"GallopLeft": SubResource("Animation_0qo0f"),
+"RESET": SubResource("Animation_8u1v7"),
+"StandLeft": SubResource("Animation_6rkga"),
+"StandRight": SubResource("Animation_l4v5f")
+}
+
+[sub_resource type="Animation" id="Animation_am328"]
+resource_name = "ChopLeft"
+
+[sub_resource type="Animation" id="Animation_22oqb"]
+resource_name = "Meditating"
+length = 3.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [26, 27, 28, 29, 30, 31, 32]
+}
+
+[sub_resource type="Animation" id="Animation_m4ncs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [26]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../HannahXmas:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [39]
+}
+
+[sub_resource type="Animation" id="Animation_qgeue"]
+resource_name = "StandBreathe"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [26, 185, 186]
+}
+
+[sub_resource type="Animation" id="Animation_lek7h"]
+resource_name = "StandLeft"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.00353, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [65, 66, 65, 66]
+}
+
+[sub_resource type="Animation" id="Animation_tlx6n"]
+resource_name = "StandRight"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [39, 40, 39, 40]
+}
+
+[sub_resource type="Animation" id="Animation_46djh"]
+resource_name = "Xmas"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../HannahXmas:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [39, 40, 41, 42, 43, 44, 43, 42, 41, 40]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yg8om"]
+_data = {
+"ChopLeft": SubResource("Animation_am328"),
+"Meditating": SubResource("Animation_22oqb"),
+"RESET": SubResource("Animation_m4ncs"),
+"StandBreathe": SubResource("Animation_qgeue"),
+"StandLeft": SubResource("Animation_lek7h"),
+"StandRight": SubResource("Animation_tlx6n"),
+"Xmas": SubResource("Animation_46djh")
+}
+
+[sub_resource type="Animation" id="Animation_y87nb"]
+resource_name = "PaintRight"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00701118, 0.511816, 0.999093, 1.51074, 2.00821),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [91, 95, 96, 95, 96]
+}
+
+[sub_resource type="Animation" id="Animation_s1513"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [13]
+}
+
+[sub_resource type="Animation" id="Animation_rhs8t"]
+resource_name = "StandBreathe"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.86265e-09, 0.515322),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [26, 182]
+}
+
+[sub_resource type="Animation" id="Animation_fm4i0"]
+resource_name = "StandLeft"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0035056, 0.494288, 1.02363),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [13, 171, 14]
+}
+
+[sub_resource type="Animation" id="Animation_3m34i"]
+resource_name = "StandRight"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3.72529e-09, 0.508311),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [39, 40]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qxw36"]
+_data = {
+"PaintRight": SubResource("Animation_y87nb"),
+"RESET": SubResource("Animation_s1513"),
+"StandBreathe": SubResource("Animation_rhs8t"),
+"StandLeft": SubResource("Animation_fm4i0"),
+"StandRight": SubResource("Animation_3m34i")
+}
+
+[sub_resource type="Animation" id="Animation_e5lvw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [26]
+}
+
+[sub_resource type="Animation" id="Animation_636de"]
+resource_name = "RepairLeft"
+
+[sub_resource type="Animation" id="Animation_4f3hi"]
+resource_name = "StandBreathe"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.49012e-08, 0.508311, 1.0061),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [26, 28, 132]
+}
+
+[sub_resource type="Animation" id="Animation_uwh0o"]
+resource_name = "StandLeft"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00701118, 0.515322, 1.0061),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [169, 170, 171]
+}
+
+[sub_resource type="Animation" id="Animation_m2iws"]
+resource_name = "StandRight"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0035056, 0.504805),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [195, 196]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rbdtt"]
+_data = {
+"RESET": SubResource("Animation_e5lvw"),
+"RepairLeft": SubResource("Animation_636de"),
+"StandBreathe": SubResource("Animation_4f3hi"),
+"StandLeft": SubResource("Animation_uwh0o"),
+"StandRight": SubResource("Animation_m2iws")
+}
+
+[sub_resource type="Animation" id="Animation_btehb"]
+resource_name = "Break"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0035056, 0.515322),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [5, 4]
+}
+
+[sub_resource type="Animation" id="Animation_rq5tg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_qecbo"]
+resource_name = "Stand"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0131761, 0.504805),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1q2sp"]
+_data = {
+"Break": SubResource("Animation_btehb"),
+"RESET": SubResource("Animation_rq5tg"),
+"Stand": SubResource("Animation_qecbo")
+}
+
+[sub_resource type="Animation" id="Animation_pjmhd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_1ul74"]
+resource_name = "RepairLeft"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.504805, 1.0061, 1.50523, 2.00661, 2.50606),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [11, 10, 7, 10, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yv6aj"]
+_data = {
+"RESET": SubResource("Animation_pjmhd"),
+"RepairLeft": SubResource("Animation_1ul74")
+}
+
+[sub_resource type="Animation" id="Animation_7at81"]
+resource_name = "ChopLeft"
+length = 1.75
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00610051, 0.251327, 0.500289, 0.754125, 1.00551, 1.25384, 1.50215),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [11, 10, 9, 7, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_g5fpp"]
+resource_name = "IdleLeft"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00305025, 0.503292, 1.00353, 1.50377),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_pr33t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lstta"]
+_data = {
+"ChopLeft": SubResource("Animation_7at81"),
+"IdleLeft": SubResource("Animation_g5fpp"),
+"RESET": SubResource("Animation_pr33t")
+}
+
+[sub_resource type="Animation" id="Animation_o0k3r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [39]
+}
+
+[sub_resource type="Animation" id="Animation_euwbw"]
+resource_name = "Xmas"
+length = 2.5
+loop_mode = 1
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [39, 40, 41, 42, 43, 44, 43, 42, 41, 40]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g1a45"]
+_data = {
+"RESET": SubResource("Animation_o0k3r"),
+"Xmas": SubResource("Animation_euwbw")
+}
+
+[node name="TravelScreen" type="Node2D"]
+script = ExtResource("1_35dff")
+
+[node name="BackGround" type="Sprite2D" parent="."]
+position = Vector2(576, 324.945)
+scale = Vector2(1.91667, 2.11075)
+texture = ExtResource("1_c2ksl")
+
+[node name="Hannah" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(848, 522)
+scale = Vector2(2, 2.10448)
+texture = ExtResource("3_mdsvd")
+hframes = 13
+vframes = 21
+frame = 26
+
+[node name="HannahAnimations" type="AnimationPlayer" parent="Hannah"]
+libraries = {
+"": SubResource("AnimationLibrary_fvpok")
+}
+
+[node name="Ittai" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(550, 494)
+scale = Vector2(3.3125, 3.16406)
+texture = ExtResource("4_r6t0h")
+hframes = 9
+vframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Ittai"]
+libraries = {
+"": SubResource("AnimationLibrary_3hwxg")
+}
+
+[node name="Rich" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(766, 519)
+scale = Vector2(1.99609, 2.5)
+texture = ExtResource("1_t3x6x")
+hframes = 13
+vframes = 20
+frame = 26
+
+[node name="RichAnimations" type="AnimationPlayer" parent="Rich"]
+libraries = {
+"": SubResource("AnimationLibrary_yg8om")
+}
+
+[node name="Kim" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(999.5, 520.5)
+scale = Vector2(1.95312, 2.17188)
+texture = ExtResource("6_5dybg")
+hframes = 13
+vframes = 20
+frame = 13
+
+[node name="KimAnimations" type="AnimationPlayer" parent="Kim"]
+libraries = {
+"": SubResource("AnimationLibrary_qxw36")
+}
+
+[node name="Matt" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(922, 506)
+scale = Vector2(1.8125, 2.3125)
+texture = ExtResource("6_bbgup")
+hframes = 13
+vframes = 20
+frame = 26
+
+[node name="MattAnimations" type="AnimationPlayer" parent="Matt"]
+libraries = {
+"": SubResource("AnimationLibrary_rbdtt")
+}
+
+[node name="Wagon" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(224, 480)
+scale = Vector2(4.5276, 3.84375)
+texture = ExtResource("10_33gte")
+hframes = 2
+vframes = 3
+
+[node name="WagonAnimation" type="AnimationPlayer" parent="Wagon"]
+libraries = {
+"": SubResource("AnimationLibrary_1q2sp")
+}
+
+[node name="Reigns" type="Sprite2D" parent="."]
+position = Vector2(216.75, 490)
+scale = Vector2(5.04688, 2.19531)
+texture = ExtResource("11_1fx8b")
+
+[node name="WagonTimer" type="Timer" parent="."]
+wait_time = 1.796
+one_shot = true
+
+[node name="BreakSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_677kg")
+
+[node name="ActionMatt" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(912, 525)
+scale = Vector2(1.8125, 2.3125)
+texture = ExtResource("7_y87h4")
+hframes = 6
+vframes = 4
+frame = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ActionMatt"]
+libraries = {
+"": SubResource("AnimationLibrary_yv6aj")
+}
+
+[node name="ActionRich" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(784, 525)
+scale = Vector2(1.7688, 2.34842)
+texture = ExtResource("2_w6sii")
+hframes = 6
+vframes = 4
+frame = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ActionRich"]
+libraries = {
+"": SubResource("AnimationLibrary_lstta")
+}
+
+[node name="Repair" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_owgc5")
+
+[node name="Gallop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_1fjt7")
+
+[node name="GallopTimer" type="Timer" parent="."]
+wait_time = 4.227
+one_shot = true
+
+[node name="Tree" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(101, 483)
+rotation = -1.83259
+scale = Vector2(0.203003, 0.196289)
+texture = ExtResource("15_e6jpk")
+
+[node name="Background2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 326)
+scale = Vector2(1.87908, 1.88372)
+texture = ExtResource("15_ua0em")
+
+[node name="TreeFall" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_fsxlf")
+
+[node name="TreeChop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_njo5y")
+
+[node name="Water" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_ckjbd")
+
+[node name="Logs" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(82, 580)
+scale = Vector2(1.65625, 1.85417)
+texture = ExtResource("19_i50wq")
+hframes = 13
+frame = 7
+
+[node name="Flowers" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(1056.47, 576)
+scale = Vector2(1.05882, 1.0625)
+texture = ExtResource("21_83675")
+
+[node name="Neigh" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_lhksf")
+
+[node name="Background3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 327)
+scale = Vector2(2.12963, 1.80556)
+texture = ExtResource("23_fi780")
+
+[node name="HannahXmas" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(136, 525)
+scale = Vector2(2.32813, 2.14286)
+texture = ExtResource("24_puf1i")
+hframes = 13
+vframes = 4
+frame = 39
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HannahXmas"]
+libraries = {
+"": SubResource("AnimationLibrary_g1a45")
+}
+
+[node name="JingleBells" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_6eitq")
+
+[node name="Star" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_85jyv")
+
+[node name="MattXmas" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(136, 525)
+scale = Vector2(2.32813, 2.14286)
+texture = ExtResource("27_mqjj3")
+hframes = 13
+vframes = 4
+frame = 39
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MattXmas"]
+libraries = {
+"": SubResource("AnimationLibrary_g1a45")
+}
+
+[node name="KimXmas" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(136, 525)
+scale = Vector2(2.32813, 2.14286)
+texture = ExtResource("28_wl81k")
+hframes = 13
+vframes = 4
+frame = 39
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KimXmas"]
+libraries = {
+"": SubResource("AnimationLibrary_g1a45")
+}
+
+[node name="RichXmas" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+position = Vector2(136, 525)
+scale = Vector2(2.32813, 2.14286)
+texture = ExtResource("29_reuhb")
+hframes = 13
+vframes = 4
+frame = 39
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RichXmas"]
+libraries = {
+"": SubResource("AnimationLibrary_g1a45")
+}
+
+[node name="Sprout" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_l8rcd")
+
+[connection signal="ready" from="Hannah" to="." method="_on_hannah_ready"]
+[connection signal="ready" from="Ittai" to="." method="_on_ittai_ready"]
+[connection signal="ready" from="Rich" to="." method="_on_rich_ready"]
+[connection signal="ready" from="Kim" to="." method="_on_kim_ready"]
+[connection signal="ready" from="Matt" to="." method="_on_matt_ready"]
+[connection signal="ready" from="Wagon" to="." method="_on_wagon_ready"]
+[connection signal="timeout" from="WagonTimer" to="." method="_on_wagon_timer_timeout"]
+[connection signal="timeout" from="GallopTimer" to="." method="_on_gallop_timer_timeout"]

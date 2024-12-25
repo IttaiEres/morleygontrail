@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1qyr8bgqn1yr"]
+
+[ext_resource type="AudioStream" uid="uid://cfg2txyxrnd6b" path="res://assets/coastal_town_noon_rain.wav" id="1_bwirh"]
+
+[node name="BackGroundMusic" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_bwirh")
+autoplay = true
